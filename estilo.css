@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@keyframes fade {
+    from {
+        transform: scale(0.6);
+    } to {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateX(20%);
+    } to { 
+        transform: translateX(0%);
+
+    }
+}
+
+@keyframes move2 {
+    from {
+        transform: translateY(50%);
+    } to { 
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes logo {
+    from {
+        transform: scale(1);
+    } to { 
+        transform: scale(1.3);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.7)), url(fotos/capa.jpeg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: move 3s;
+}
+
+.texto-cabecalho {
+    margin-left: 100px;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Quintessential', cursive;
+    text-shadow: 2px 2px gold;
+    font-size: 140px;
+    animation: fade 3s;
+}
+
+.subtexto-cabecalho {
+    
+    margin-left: 90px;
+    color: white;
+    font-family: 'Quintessential', cursive;
+    font-size: 40px;
+    animation: fade 3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 25px;
+    margin-left: 90px;
+    height: 60px;
+    width: 60px;
+    animation: fade 3s;
+}
+
+
+ul li {
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-left: 10px;
+    display: inline-block;
+    list-style: none;
+    color: white;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: darkorange;
+}
+
+.menu-inicio {
+    color: lightseagreen;
+}
+
+.container-imagem {
+    margin-top: 20px;
+    justify-content: safe;
+}
+
+.titulo-servicos {
+    opacity: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: Black;
+    font-family: 'Bree Serif', serif;
+    animation: move2 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    
+}
+
+.div-fotos {
+    display: flex;
+    justify-content: center;
+}
+
+.fotos-cafe {
+    opacity: 0;
+    height: 300px;
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius: 20px;
+    animation: move2 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+
+h3 {
+    font-size: 30px;
+    opacity: 0;
+    color: brown;
+    margin-left: 130px;
+    font-family: 'Quintessential', cursive;
+    animation: move2 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.rodape {
+    margin-top: 10px;
+    height: 70px;
+    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.7)), darkslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-rodape {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    padding: 6px;
+}
+
+.logo-rodape:hover {
+    animation: logo 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 768px) {
+    .div-fotos {
+        display: block;
+        margin-right: 40px;
+    }
+
+    .titulo-servicos {
+        margin-right: 10px;
+    }
+
+    .texto-cabecalho {
+        font-size: 60px;
+    }
+
+    .subtexto-cabecalho {
+        font-size: 30px;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+}
